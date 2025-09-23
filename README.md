@@ -15,6 +15,11 @@ This is a simple face detection application built using Python and OpenCV. The a
 git clone this_repository_url
 cd face-detection-app
 
+## Run the application
+
+python face_detection.py -for the haar ascade
+python face_detection_dnn_based.py -for the dnn model
+
 ## Create a virtual environment (optional but recommended)
 
 python -m venv venv
