@@ -15,6 +15,11 @@ This is a simple face detection application built using Python and OpenCV. The a
 git clone this_repository_url
 cd face-detection-app
 
+## Running the Applcation
+
+"python face_detection.py" for the Haar Cascade method.
+"python face_detection_dnn_based.py" for the DNN method
+
 ## Create a virtual environment (optional but recommended)
 
 python -m venv venv
