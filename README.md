@@ -42,3 +42,12 @@ source venv/bin/activate
 ### Install the required packages
 
 pip install -r requirements.txt
+
+## Usage
+
+python face_detection.py
+or  python face_detection_dnn_based.py
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
