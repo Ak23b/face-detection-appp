@@ -4,10 +4,13 @@ import cv2
 modelFile = "res10_300x300_ssd_iter_140000_fp16.caffemodel"
 configFile = "deploy.prototxt.txt"
 
+
 net = cv2.dnn.readNetFromCaffe(configFile, modelFile)
+
 
 # Start webcam
 cap = cv2.VideoCapture(0)
+
 
 while True:
     ret, frame = cap.read()
@@ -21,9 +24,11 @@ while True:
                                  1.0,
                                  (300,300),
                                  (104.0,177.0,123.0))
+
     
     net.setInput(blob)
     detections = net.forward()
+
     
     # Loop through detections
     for i in range(0, detections.shape[2]):
@@ -42,9 +47,11 @@ while True:
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
             
     cv2.imshow("DNN Face Detection", frame)
+
     
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
+
     
 cap.release()
 cv2.destroyAllWindows()
